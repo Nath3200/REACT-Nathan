@@ -10,8 +10,8 @@ import PageError from './pages/PageError/PageError';
 import Blog from './pages/Blog/Blog';
 import Counter from './components/Counter/Counter';
  import Toogle from './components/Toogle/Toogle';
-// import List from './components/List/List';
  import Metier from './components/Metier/Metier';
+import List from './components/List/List';
 
 function App() {
   // les PROPS sert a utiliser une valeur plusieurs fois, on doit declarer un usestate avec usf
@@ -20,10 +20,12 @@ function App() {
       <Routes>
         <Route index element={<Cv/>}/>
         <Route path="/home" element={<Cv/>}/>
-        <Route path="/metier" element={<Metier/>}/>
+        <Route path="/blog" element={<Blog/>}/>
+        <Route path="/Metier" element={<Metier/>}/>
         <Route path="/Toogle" element={<Toogle/>}/>
         <Route path="/Counter" element={<Counter/>}/>
-        <Route path="/blog" element={<Blog/>}/>
+        <Route path="/List" element={<List/>}/>
+        
         <Route path="*" element={<PageError/>}/>
   </Routes>
 

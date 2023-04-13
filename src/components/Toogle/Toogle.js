@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './Toogle.css'; 
 
 const Toogle = () => {
 
@@ -8,12 +9,13 @@ const ActiveToogle = () => {
     setToogle(!toogle)
 }
   return (
-    <div>hello Toogle
+    <div className='toogle'>
+      <h1 className='name'>Welcome to the Toogle</h1>
 
-        <button onClick={() => ActiveToogle()}>Active Toogle</button>
+        <button className='bouton' onClick={() => ActiveToogle()}>Active Toogle</button>
 
           {toogle && 
-          <div>coucou</div>
+          <div className='coucou'>coucou</div>
           }
 
           

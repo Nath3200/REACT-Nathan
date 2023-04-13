@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './Metier.css'; 
 
 const Metier = () => {
     
@@ -19,12 +20,12 @@ const handleIntermediaire = () => {
   }
 
   return (
-    <div>
-        <h1>je suis {state.metier} {" "} {state.niveau}</h1>
-        <button onClick={()=>handleJunior()}>
+    <div className='metier'>
+        <h1 className='nom'>Je suis {state.metier} {" "} {state.niveau}</h1>
+        <button className='junior' onClick={()=>handleJunior()}>
         dans trois mois, je serais junior</button>
-        <button onClick={()=>handleIntermediaire()}>dans un an,je serais intermediaire</button>
-        <button onClick={()=>handleSenior()}>dans cinq ans,je serais senior</button>
+        <button className='intermediaire' onClick={()=>handleIntermediaire()}>dans un an,je serais intermediaire</button>
+        <button className='senior' onClick={()=>handleSenior()}>dans cinq ans,je serais senior</button>
     </div>
   )
 }

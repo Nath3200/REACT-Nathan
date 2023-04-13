@@ -1,0 +1,26 @@
+div.toogle{
+    background-color: rgb(249, 166, 32);
+    height: 609px;
+    width: 1260px;   
+    line-height: 100px;
+       
+}
+h1.name{
+    font-size:80px;
+    text-align: center;
+    font-weight: bold;
+}
+.bouton{
+    font-size:20px;
+    background-color: rgb(16, 242, 16);
+    border-radius: 10px;   
+    margin-left: 5px;   
+}
+div.coucou{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     
+    font-size: 50px;
+    text-align: center;
+    color: yellow;
+
+}

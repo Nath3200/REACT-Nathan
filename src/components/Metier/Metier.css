@@ -1,0 +1,27 @@
+div.metier{
+    background-color: rgb(215, 211, 211);
+    height: 609px;
+    width: 1260px;   
+    
+       
+}
+h1.nom{
+    font-size:50px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 200px;
+}
+.junior{
+    background-color: rgb(32, 218, 247);
+    margin-left: 250px;
+    border-width: 30px;
+      
+}
+.intermediaire{    
+    background-color: rgb(16, 242, 16);
+    border-width: 30px;
+}
+.senior{
+    background-color: rgb(176, 12, 12);
+    border-width: 30px;
+}

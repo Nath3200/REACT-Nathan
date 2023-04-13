@@ -1,0 +1,18 @@
+div.list{
+    background-color: beige;
+    height: 609px;
+    width: 1260px;   
+    line-height: 100px;
+       
+}
+h1.prenom{
+    font-size:80px;
+    text-align: center;
+    font-weight: bold;
+}
+div.cours{
+    font-size:20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: brown;
+    margin-left: 5px;   
+}

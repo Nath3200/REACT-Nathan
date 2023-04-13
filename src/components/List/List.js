@@ -1,23 +1,26 @@
 import React, {useState} from 'react'
+import './List.css';  
 
 const List = () => {
 const [list, setList] = useState([{
 id: 1,
-coursImportant: "React js"
+coursImportant: "- React js"
 },{
     id: 2,
-    coursImportant: "html css"
+    coursImportant: "- html css"
 },{
     id: 3,
-    coursImportant: "Vanilla javascript"
+    coursImportant: "- Vanilla javascript"
 }]);
 
+
+
   return (
-    <div>
-        <h1>List des cours importants</h1>
+    <div className='list'>
+        <h1 className='prenom'>Liste des cours importants : </h1>
         {
         list.map((cour) => (
-            <div key={cour.id}>
+            <div className='cours' key={cour.id}>
             {cour.coursImportant} 
             </div>          
         ))
