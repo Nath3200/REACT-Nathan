@@ -1,0 +1,41 @@
+.projet{
+    text-align: center;
+    font-family:'Times New Roman', Times, serif
+}
+.pro{
+    background-color: rgb(179, 37, 26);
+}
+.container{
+    max-width: 500px;
+    height: 330px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.container h2{
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+.pacman{
+    height: 200px;
+    width: 200px;
+    margin-left: 20px;
+    float:left
+}
+.jeu{
+    margin-left: 300px;  
+}
+.mode{
+    height: 170px;
+    width: 200px;
+    margin-left: 20px;
+    float:left
+}
+.work{
+    padding-bottom: 30px;
+    height: 100px;
+    width: 100px;
+    margin-left: 20px;
+    float:right
+}

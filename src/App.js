@@ -9,22 +9,29 @@ import { Routes, Route } from 'react-router-dom';
 import PageError from './pages/PageError/PageError';
 import Blog from './pages/Blog/Blog';
 import Counter from './components/Counter/Counter';
- import Toogle from './components/Toogle/Toogle';
- import Metier from './components/Metier/Metier';
+import Projet from './pages/Projet/Projet';
 import List from './components/List/List';
+import Toogle from './components/Toogle/Toogle';
+import Metier from './components/Metier/Metier';
+
+import UseEffectCompo from './pages/UseEffectCompo/UseEffectCompo';
 
 function App() {
   // les PROPS sert a utiliser une valeur plusieurs fois, on doit declarer un usestate avec usf
+  // fa = fonction flechee
 
   return (
       <Routes>
-        <Route index element={<Cv/>}/>
-        <Route path="/home" element={<Cv/>}/>
+        <Route index element={<Projet/>}/>
+        <Route path="/cv" element={<Cv/>}/>
         <Route path="/blog" element={<Blog/>}/>
-        <Route path="/Metier" element={<Metier/>}/>
-        <Route path="/Toogle" element={<Toogle/>}/>
         <Route path="/Counter" element={<Counter/>}/>
-        <Route path="/List" element={<List/>}/>
+        <Route path="/list" element={<List/>}/>
+        <Route path="/Toogle" element={<Toogle/>}/>
+        <Route path="/Metier" element={<Metier/>}/>
+
+        <Route path="/UseEffectCompo" element={<UseEffectCompo/>}/>
+        <Route path="/Projet" element={<Projet/>}/>
         
         <Route path="*" element={<PageError/>}/>
   </Routes>

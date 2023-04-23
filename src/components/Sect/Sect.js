@@ -6,11 +6,11 @@ const Sect = () => {
     <section id="slider">
 			<div className="conteneur flex-slider">
 				<figure id="milieu-haut-gauche">
-					<a href="/">
+					<a>
 						<img src={responsiv} alt="Relou qui represente plusieurs écrans pour le responsive" title="Responsive design"/>
 					</a>
 					<figcaption>
-						<a href="/">Projets Responsive Design</a>
+						<a>Projets Responsive Design</a>
 					</figcaption>
 				</figure>
 				<div id="milieu-haut-droit">

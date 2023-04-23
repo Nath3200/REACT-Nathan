@@ -24,7 +24,7 @@ const Cv = () => {
 		
 		<Sect/>
 
-      <Main HandleName={HandleName}/>
+      <Main HandleName={HandleName} name={name}/>
 
       <Footer name={name}/>
     </div>
