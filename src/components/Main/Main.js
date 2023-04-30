@@ -30,7 +30,7 @@ const Main = (props) => {
 					<h2>Présentation</h2>
 					<div className="profil-flex">
 						<img src={photo} title={props.name}alt={props.name}/>
-						<p>Diplomé d une Licence d'Economie et Gestion des Firmes ainsi que de la Formation Webschool Developer Full Stack, mes competences vont de l'aspect Commercial-Relationnel au Developpement-Integration Web via HTML/CSS, JavaScript et REACT. <br />
+						<p>Diplomé d une Licence d'Economie et Gestion des Firmes et actuellement en Formation Webschool Developer Full Stack, mes competences vont de l'aspect Commercial-Relationnel au Developpement-Integration Web via HTML/CSS, JavaScript et REACT. <br />
 						Mes principes fondamentaux sont Rigueurs et Dynamisme, j ai une grande soif d apprendre a vos cotes et apporter toutes mes competences a votre service. </p>
 					</div>
 					<div className="mise-en-avant">
@@ -48,11 +48,11 @@ const Main = (props) => {
 						<p>Jeune actif et dynamique pret a apporter ma plus-value a votre entreprise.  </p>
 					</div>
 					<div className="encart">
-						<h3>Experience</h3>
+						<h3>Experiences</h3>
 						<ul>
-							<li>Community Manager - CharityClic</li><br />
-							<li>Responsable Technique/Commercial - Annatel</li><br />
-							<li>Ingenieur Commercial - Business Services</li>
+							<li>Community Manager - <br />Publicité, Prospection et Proposition de service sur plateforme de dons.<br /> CharityClic.com</li><br />
+							<li>Responsable Commercial - <br />Assistance Technique, Relation/Clients, Ventes et Fidelisation <br /> Annatel</li><br />
+							<li>Ingenieur Commercial - <br />Qualifeur PABX, prise de renseignements aupres des gerants pour leur fournir un service telephonie adaptee a leur besoin en partenariat avec Orange.<br /> Business Services</li>
 						</ul>
 					</div>
 					<div className="encart">

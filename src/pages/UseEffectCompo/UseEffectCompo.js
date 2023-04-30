@@ -1,5 +1,5 @@
-// uef pour useEffect((=>{}))
-// usf pour useState
+// uef pour useEffect((=>{})) sert a gerer les cycles de vie des components
+// usf pour useState sert a stocker les valeurs
 // key pour revenir en arriere dans le .map
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'

@@ -1,13 +1,14 @@
-// uef pour useEffect((=>{}))
-// usf pour useState
+// uef pour useEffect((=>{})) sert a gerer les cycles de vie des components
+// usf pour useState sert a stocker les valeurs
 // key pour revenir en arriere dans le .map
 
 import React, {useEffect, useState} from 'react'
 import './Blog.css'
-import Layout from '../../components/Layout/Layout'
+// import Layout from '../../components/Layout/Layout'
 import Introduction from '../../components/Introduction/Introduction';
 import Lien from '../../components/Lien/Lien';
 import axios  from 'axios';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
 
@@ -23,7 +24,7 @@ const Blog = () => {
   const HandleFooter = () => {setActiveFooter(!activeFooter)
   }
 
-  const [data, setData] = useState();
+const [data, setData] = useState();
 
 useEffect(() => {
   console.log("mon blog est monte");
@@ -47,16 +48,20 @@ useEffect(() => {
 
 	  </header>
 
-    <h1>Welcom in my Blog</h1>
+    <h1>Welcome in my Blog</h1>
 
     {
      data && data.map((row)=>(
+      
       <div key={row.id} className='bg-secondary shadow-lg rounded m-3 p-3'>
           <h2>{row.title}</h2>
-          <img src={row.image}></img>
+          <Link className="text-decoration-none text-dark" to={`/article/${row.id}`}>
+            <img src={row.image} className='img-fluid'></img>
+          </Link>
           <p>{row.article}</p>
           <p>{row.auteur}</p>
       </div>
+      
   ))
     }
     
