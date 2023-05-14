@@ -1,13 +1,16 @@
 // rafce pour obtenir de import a Footer
-
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 const Footer = (props) => {
   console.log(props)
+const {t} = useTranslation()
+
   return (
     <footer>
-			<nav className="conteneur"><a href="informations.html">Informations</a> - <a href="mentionslégales.html">Mentions légales</a> - <a href="Contact.html">Contact</a></nav>
-			<p className="conteneur">© 2023 Conception et réalisation par {props.name}. Tous droits réservés.</p>
+			<nav className="conteneur"><a href="">Informations</a> - <a href="">{t("CV.mention")}</a> - <a href="">Contact</a></nav>
+			<p className="conteneur">© {t("CV.conception")} Nathan Guedj. {t("CV.droit")}</p>
+      {/* {props.name} */}
 		</footer>
   )
 }

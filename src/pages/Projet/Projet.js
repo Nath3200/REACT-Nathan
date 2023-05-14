@@ -2,10 +2,11 @@ import React, {useEffect,useState} from 'react'
 import './Projet.css'
 import Introduction from '../../components/Introduction/Introduction'
 import Lien from '../../components/Lien/Lien'
-import axios from 'axios'
+// import axios from 'axios'
 import Pacman from '../../assets/img/Pacman.jpg'
 import Mode from '../../assets/img/mode.jpg'
 import Work from '../../assets/img/work-in-progress.png'
+import { useTranslation } from 'react-i18next'
 
 const Projet = () => {
 
@@ -13,8 +14,9 @@ const Projet = () => {
         // let name = "nathan guedj"
         // cb = callback
         const HandleName = (cb)=>{ //importer test du l enfant
-           setName(cb)
+          setName(cb)
         }
+        const {t} = useTranslation()
 
 // const [data, setData] = useState();
 
@@ -40,7 +42,8 @@ const Projet = () => {
 
 	  </header>
       <br /><br />
-       <h1 className='projet'>Voici mes Projets</h1>
+       <div className='projet'><h1>{t("Portfolio.title")}</h1></div>
+       {/* Voici mes Projets */}
 
        {/* {
      data && data.map((row)=>(
@@ -54,21 +57,18 @@ const Projet = () => {
     } */}
 
         <article className='container'>  
-        <h2>Catch me if you Can</h2>
+        <h2>{t("Portfolio.title1")}</h2>
         <img className='pacman' src={Pacman} title="Catch me if you Can" alt="Pacman"/>
          <br /><br />   
-        <p className='jeu'><a href='https://main--peppy-centaur-0b834a.netlify.app/'>Lien pour jouer</a><br />
-           Ce jeu video a ete realise avec les langages JavaScript et HTML/CSS.
-           Stocker dans une memoire JSON, ce jeu est interactif puisque le score des meilleurs joueurs est actualisée.
-           L'objectif est d attrapper le bouton sauvage avant qu'il n'y s'echappe.
-           Cependant, celui-ci n est pas content lorsqu'il est attrape. C'est pourquoi au fur et a mesure que vous passez les niveau, il devient difficile de l'attraper et le bouton devient incontrolable.
+        <p className='jeu'><a href='https://main--peppy-centaur-0b834a.netlify.app/'>{t("Portfolio.link1")}</a><br />
+           {t("Portfolio.article1")}
         </p>
        </article> <br />
        <article className='container'>
-         <h2>Mode_26.com</h2><img className='work' src={Work}  alt="Work in progress" /><br />
+         <h2>{t("Portfolio.title2")}</h2><img className='work' src={Work}  alt="Work in progress" /><br />
          <img className='mode' src={Mode} title="WebShop Mode_26" alt="WebShop Mode_26" />
          <p className='jeu'>
-           La marque Mode_26 issu du Sud de la France debarque tres prochainement sur le e-commerce. <br />Importé des marchés provencaux, notre style Chic&Boheme saura vous emerveiller tant au niveau du design que de la qualité des produits. Robes, jupes, pantalon, T-Shirt et encore plus vous attendent bientot sur notre site. <br />Dedié aux femmes, vous pourrez vous faire plaisir avec des matieres de qualité ainsi qu'a des prix raisonnables.
+           {t("Portfolio.article2")}
         </p>
        </article>
     </div>

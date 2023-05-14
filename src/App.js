@@ -19,13 +19,10 @@ import UseEffectCompo from './pages/UseEffectCompo/UseEffectCompo';
 import SetIntervalCompo from './pages/SetIntervalCompo/SetIntervalCompo';
 import MouseMoove from './pages/MouseMoove/MouseMoove';
 
-
 import PageUne from './components/PageUne/PageUne';
-import AddArticle from './components/AddArticle/AddArticle';
 import ApiGeneral from './components/ApiGeneral/ApiGeneral';
 import AxiosGet from './components/AxiosGet/AxiosGet';
 import AxiosPost from './components/AxiosPost/AxiosPost';
-import DeleteArticle from './components/DeleteArticle/DeleteArticle';
 import GetArticle from './components/GetArticle/GetArticle';
 import GetArticleById from './components/GetArticleById/GetArticleById';
 import LinkExplication from './components/LinkExplication/LinkExplication';
@@ -36,6 +33,20 @@ import StyleFonction from './components/StyleFonction/StyleFonction';
 import StyleGeneral from './components/StyleGeneral/StyleGeneral';
 import StyleSepare from './components/StyleSepare/StyleSepare';
 import UseLocation from './components/UseLocation/UseLocation';
+
+import AddArticle from './pages/Articles/AddArticle';
+import DeleteArticle from './pages/Articles/DeleteArticle';
+import UpdateArticle from './pages/Articles/UpdateArticle';
+import NavbarOffcanvas from 'react-bootstrap/esm/NavbarOffcanvas';
+import DataTableBasique from './pages/DataTable/DataTableBasique';
+import DataTableSort from './pages/DataTable/DataTableSort';
+import DataTableFull from './pages/DataTable/DataTableFull';
+import Login from './pages/Login/Login';
+
+import HKbase from './pages/HookForm/HKbase';
+import HookSelect from './pages/HookForm/HookSelect';
+import HfBlur from './pages/HookForm/HfBlur';
+import FormikExemple from './pages/HookForm/FormikExemple';
 
 
 
@@ -59,12 +70,10 @@ function App() {
         <Route path="/SetIntervalCompo" element={<SetIntervalCompo/>}/>
         <Route path="/MouseMoove" element={<MouseMoove/>}/>
         
-        <Route path="/PageUne" element={<PageUne/>}/>
-        <Route path="/AddArticle" element={<AddArticle/>}/>
+        <Route path="/PageUne" element={<PageUne/>}/>     
         <Route path="/ApiGeneral" element={<ApiGeneral/>}/>
         <Route path="/AxiosGet" element={<AxiosGet/>}/>
         <Route path="/AxiosPost" element={<AxiosPost/>}/>
-        <Route path="/DeleteArticle" element={<DeleteArticle/>}/>
         <Route path="/GetArticle" element={<GetArticle/>}/>
         <Route path="/GetArticleById" element={<GetArticleById/>}/>
         <Route path="/LinkExplication" element={<LinkExplication/>}/>
@@ -75,7 +84,22 @@ function App() {
         <Route path="/StyleGeneral" element={<StyleGeneral/>}/>
         <Route path="/StyleSepare" element={<StyleSepare/>}/>
         <Route path="/UseLocation" element={<UseLocation/>}/>
+
+        <Route path="/AddArticle" element={<AddArticle/>}/>
+        <Route path="/DeleteArticle" element={<DeleteArticle/>}/>
+        <Route path="/UpdateArticle" element={<UpdateArticle/>}/>
         
+        <Route path="/Login" element={<Login/>}/>
+
+        <Route path="/NavbarOffcanvas" element={<NavbarOffcanvas/>}/>
+        <Route path="/DataTableBasique" element={<DataTableBasique/>}/>
+        <Route path="/DataTableSort" element={<DataTableSort/>}/>
+        <Route path="/DataTableFull" element={<DataTableFull/>}/>
+        
+        <Route path="/HKbase" element={<HKbase/>}/>
+        <Route path="/HookSelect" element={<HookSelect/>}/>
+        <Route path="/HfBlur" element={<HfBlur/>}/>
+        <Route path="/FormikExemple" element={<FormikExemple/>}/>        
        
         <Route path="*" element={<PageError/>}/>
      </Routes>

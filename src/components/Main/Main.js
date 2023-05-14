@@ -7,9 +7,11 @@ import design from "../../assets/img/design.png"
 import integration from "../../assets/img/integration.png"
 import dev from "../../assets/img/dev.png"
 import seo from "../../assets/img/seo.png"
+import { useTranslation } from 'react-i18next'
 
 const CardPointFort = (props) => {
 	console.log("props depuis CardPointFort",props)
+
   return(
 	<>	
 	  <figure>
@@ -23,50 +25,53 @@ const CardPointFort = (props) => {
 
 const Main = (props) => {
 	console.log("props",props)
+
+const {t} = useTranslation()
+	
   return (
     		<main>
 			<div className="conteneur flex-main">
 				<section id="presentation">
-					<h2>Présentation</h2>
+					<h2>Presentation</h2>
 					<div className="profil-flex">
 						<img src={photo} title={props.name}alt={props.name}/>
-						<p>Diplomé d une Licence d'Economie et Gestion des Firmes et actuellement en Formation Webschool Developer Full Stack, mes competences vont de l'aspect Commercial-Relationnel au Developpement-Integration Web via HTML/CSS, JavaScript et REACT. <br />
-						Mes principes fondamentaux sont Rigueurs et Dynamisme, j ai une grande soif d apprendre a vos cotes et apporter toutes mes competences a votre service. </p>
+						<p>{t("CV.diplome")} <br />
+						{t("CV.principes")} </p>
 					</div>
 					<div className="mise-en-avant">
 
-						<CardPointFort title="Design" img={design} alt={"Design"} figcaption={"J aime le design"} />
-						<CardPointFort title="Front-end development" img={integration} alt={"Design"} figcaption={"J aime le front-end "} />
-						<CardPointFort title="Back-end development" img={dev} alt={"Design"} figcaption={"J aime le back-end "} />
-						<CardPointFort title="SEO" img={seo} alt={"Design"} figcaption={"J aime le management"} />
+						<CardPointFort title="Design" img={design} alt={"Design"} figcaption={t("CV.design")} />
+						<CardPointFort title="Front-end development" img={integration} alt={"Design"} figcaption={t("CV.front")} />
+						<CardPointFort title="Back-end development" img={dev} alt={"Design"} figcaption={t("CV.back")} />
+						<CardPointFort title="SEO" img={seo} alt={"Design"} figcaption={t("CV.seo")} />
 					
 					</div>
 				</section>
 				<aside>
 					<div className="encart">
-						<h3>Qui suis-je ?</h3>
-						<p>Jeune actif et dynamique pret a apporter ma plus-value a votre entreprise.  </p>
+						<h3>{t("CV.qui")}</h3>
+						<p>{t("CV.description")}</p>
 					</div>
 					<div className="encart">
 						<h3>Experiences</h3>
 						<ul>
-							<li>Community Manager - <br />Publicité, Prospection et Proposition de service sur plateforme de dons.<br /> CharityClic.com</li><br />
-							<li>Responsable Commercial - <br />Assistance Technique, Relation/Clients, Ventes et Fidelisation <br /> Annatel</li><br />
-							<li>Ingenieur Commercial - <br />Qualifeur PABX, prise de renseignements aupres des gerants pour leur fournir un service telephonie adaptee a leur besoin en partenariat avec Orange.<br /> Business Services</li>
+							<li>Community Manager - <br />{t("CV.job1")}<br /> CharityClic.com</li><br />
+							<li>{t("CV.title_job2")} - <br />{t("CV.job2")} <br /> Annatel</li><br />
+							<li>{t("CV.title_job3")} - <br />{t("CV.job3")}<br /> Business Services</li>
 						</ul>
 					</div>
 					<div className="encart">
 						<h3>Contact</h3>
 				
-							<label htmlFor="prenom">Prenom</label>
+							<label htmlFor="prenom">{t("CV.prenom")}</label>
 							<input type="text" id="prenom" name="prenom"/> <hr />
-							<label htmlFor="nom">Nom</label>
+							<label htmlFor="nom">{t("CV.nom")}</label>
 							<input type="text" id="nom" name="nom"/><hr />
 							<label htmlFor="email">Email</label>
 							<input type="text" id="email" name="email"/><hr />
 							<label htmlFor="message"></label>
-							<textarea placeholder="Ecrire un message" id="message" name="message"/> <hr />
-							<input type="submit" onClick={()=> props.HandleName("test")}/>
+							<textarea placeholder={t("CV.message")} id="message" name="message"/> <hr />
+							<button type='submit' onClick={()=> props.HandleName("test")}>{t("CV.envoyer")}</button>  
 						
 					</div>
 				</aside>

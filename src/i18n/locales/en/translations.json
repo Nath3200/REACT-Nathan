@@ -1,0 +1,59 @@
+{
+  "header": {},
+  "nav": {
+    "login": "Login"
+  },
+  "Portfolio": {
+    "title" : "All my projects",
+    "title1" : "Catch me if you Can",
+    "link1" : "Link to play",
+    "article1" : "This video game was made with JavaScript and HTML/CSS languages. Stored in a JSON memory, this game is interactive since the score of the best players is updated. The objective is to catch the wild button before it escapes. However, this one angry when he is caught. That's why as you pass the levels, it becomes difficult to catch it and the button becomes uncontrollable.",
+    "title2" : "Mode 26",
+    "link2" : "",
+    "article2" : "The Mode_26 brand from the South of France will soon land on e-commerce. Imported from the Provencal markets, our Chic&Boheme style will amaze you both in terms of design and product quality. Dresses, skirts, pants, T-shirts and more are waiting for you soon on our site. Dedicated to women, you can indulge yourself with quality materials and at reasonable prices."
+  },
+
+  "Lien" : {
+    "Langue" : "Language"
+  },
+
+  "CV" : {
+    "href" : "Download my C.V",
+    "a" : "Projects Responsive Design",
+    "title": "You are looking for a developer to manage your web projects ?",   
+    "p1" :"I can enhance your team as much on the graphic part as on the development",
+    "p2" : "Would you be willing to give me my chance ?",
+    "diplome" : "Graduated with a Bachelor's degree in Economics and Business Management and currently in Webschool Developer Full Stack Training, my skills range from the Commercial-Relational aspect to Web Development-Integration via HTML/CSS, JavaScript and REACT.",
+    "principes" : "My fundamental principles are Rigor and Dynamism, I have a great desire to learn alongside you and bring all my skills to your service.",
+    "design" : "I love the design",
+    "front" : "I love the Front-End",
+    "back" : "I love the Back-End",
+    "seo" : "I love the management",
+    "qui" : "Description ",
+    "description" : "Young active and dynamic ready to bring my added value to your company.",
+    "job1" : "Advertising, prospecting and service proposal on donation platform.",
+    "job2" : "Technical Assistance, Customer Relations, Sales and Loyalty.",
+    "title_job2" : "Sales manager",
+    "job3" : "PABX qualifier, taking information from managers to provide them with a telephone service adapted to their needs in partnership with Orange.",
+    "title_job3" : "Commercial Ingenior",
+    "prenom" : "First Name",
+    "nom" : "Last Name",
+    "message" : "Write a message",
+    "mention" : "Legal Notice",
+    "conception" : "2023 Design and production by",
+    "droit" : "All rights reserved.",
+    "envoyer" : "Send"
+  },
+
+  "Blog" : {
+    "h1" : "Welcome in my Blog"
+  },
+
+  "Login" : {
+    "email" : "Mail",
+    "password" : "Password",
+    "connect" : "Connect"
+  },
+
+  "footer": {}
+}

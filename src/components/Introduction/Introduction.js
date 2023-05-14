@@ -3,21 +3,25 @@
 
 import React, { useState } from 'react'
 import "./Introduction.css"
+import { useTranslation } from 'react-i18next';
 
 const Introduction = ({name}) => {
 const [changeColor, setChangecolor]= useState("red");
+
+const {t} = useTranslation()
 
   return (
     <div className="conteneur">
 				<div className="normal-flex">
 					<div className="haut-gauche">
-						<h1 className={`text-${changeColor}`} onClick={()=> setChangecolor("blue")}>{name}</h1>
+						<h1 className={`text-${changeColor}`} onClick={()=> setChangecolor("blue")}>Nathan Guedj</h1>
+						{/* {name} */}
 						<strong>Communication</strong> /
 						<strong>Marketing</strong> /
 						<strong>Digital</strong>
 					</div>
 					<div className="haut-droit">
-						<a href="/cv">Télécharger mon c.v.</a>
+						<a href="/cv">{t("CV.href")}</a>
 					</div>
 				</div>
 			</div> 

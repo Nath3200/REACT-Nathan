@@ -9,6 +9,8 @@ import Introduction from '../../components/Introduction/Introduction';
 import Lien from '../../components/Lien/Lien';
 import axios  from 'axios';
 import { Link } from 'react-router-dom';
+import i18n from '../../i18n/config';
+import { useTranslation } from 'react-i18next';
 
 const Blog = () => {
 
@@ -19,12 +21,12 @@ const Blog = () => {
            setName(cb)
         }
 
+  const [data, setData] = useState();
   const [activeFooter, setActiveFooter]= useState(false);
-
-  const HandleFooter = () => {setActiveFooter(!activeFooter)
-  }
-
-const [data, setData] = useState();
+  const [language, setLanguage] = useState();
+  // const HandleFooter = () => {setActiveFooter(!activeFooter)
+  // }
+  const {t} = useTranslation();
 
 useEffect(() => {
   console.log("mon blog est monte");
@@ -39,6 +41,25 @@ useEffect(() => {
 });
 }, []);
 
+useEffect(() => {
+  const handleChangeLanguage = () => {
+    // La langue a changé, faites quelque chose ici...
+    console.log('La langue a changé ! Nouvelle langue :', i18n.language);
+    setLanguage(i18n.language)
+  };
+  
+  i18n.on('languageChanged', handleChangeLanguage);
+
+  // Nettoyage : supprime l'écouteur d'événement lorsque le composant est démonté
+  return () => {
+    i18n.off('languageChanged', handleChangeLanguage);
+  };
+}, [i18n]);
+
+useEffect(() => {
+  console.log("language",language)
+}, []);
+
   return (
     <>
     <header className='blog'>
@@ -48,17 +69,17 @@ useEffect(() => {
 
 	  </header>
 
-    <h1>Welcome in my Blog</h1>
+    <h1>{t("Blog.h1")}</h1>
 
     {
      data && data.map((row)=>(
       
-      <div key={row.id} className='bg-secondary shadow-lg rounded m-3 p-3'>
-          <h2>{row.title}</h2>
-          <Link className="text-decoration-none text-dark" to={`/article/${row.id}`}>
+      <div  className='bg-secondary shadow-lg rounded m-3 p-3'>
+          <h2>{language==="fr" ?  row.title : row.titleEN && language==="en" ?  row.titleEN : row.title }</h2>
+          <Link key={row.id}className="text-decoration-none text-dark" to={`/article/${row.id}`}>
             <img src={row.image} className='img-fluid'></img>
           </Link>
-          <p>{row.article}</p>
+          <p>{language==="fr" ? row.article : row.articleEN && language==="en" ?  row.articleEN : row.article}</p>
           <p>{row.auteur}</p>
       </div>
       

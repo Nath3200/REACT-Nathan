@@ -1,0 +1,59 @@
+{
+  "header": {},
+  "nav": {
+    "login": "S'authentifier"
+  },
+  "Portfolio": {
+    "title" : "Voici mes projets",
+    "title1" : "Attrape moi si tu Peux",
+    "link1" : "Lien pour jouer",
+    "article1" : "Ce jeu video a ete realise avec les langages JavaScript et HTML/CSS. Stocker dans une memoire JSON, ce jeu est interactif puisque le score des meilleurs joueurs est actualisée. L'objectif est d attrapper le bouton sauvage avant qu'il n'y s'echappe. Cependant, celui-ci n est pas content lorsqu'il est attrape. C'est pourquoi au fur et a mesure que vous passez les niveau, il devient difficile de l'attraper et le bouton devient incontrolable.",
+    "title2" : "Mode 26",
+    "link2" : "",
+    "article2" : "La marque Mode_26 issu du Sud de la France debarque tres prochainement sur le e-commerce. Importé des marchés provencaux, notre style Chic&Boheme saura vous emerveiller tant au niveau du design que de la qualité des produits. Robes, jupes, pantalon, T-Shirt et encore plus vous attendent bientot sur notre site. Dedié aux femmes, vous pourrez vous faire plaisir avec des matieres de qualité ainsi qu'a des prix raisonnables."
+  },
+
+  "Lien" : {
+    "Langue" : "Langue"
+  },
+
+  "CV" : {
+    "href" : "Télécharger mon c.v.",
+    "a" : "Projets Responsive Design",
+    "title": "Vous êtes à la recherche d'un développeur pour gérer vos projets web ?",   
+    "p1" :"Je peux renforcer votre équipe autant sur la partie graphique que développement",
+    "p2" : "Seriez-vous prêt à me donner ma chance ?",
+    "diplome" : "Diplomé d une Licence d'Economie et Gestion des Firmes et actuellement en Formation Webschool Developer Full Stack, mes competences vont de l'aspect Commercial-Relationnel au Developpement-Integration Web via HTML/CSS, JavaScript et REACT.",
+    "principes" : "Mes principes fondamentaux sont Rigueurs et Dynamisme, j ai une grande soif d apprendre a vos cotes et apporter toutes mes competences a votre service.",
+    "design" : "J aime le design",
+    "front" : "J aime le Front-End",
+    "back" : "J aime le Back-End",
+    "seo" : "J aime le management",
+    "qui" : "Qui suis-je ?",
+    "description" : "Jeune actif et dynamique pret a apporter ma plus-value a votre entreprise.",
+    "job1" : "Publicité, Prospection et Proposition de service sur plateforme de dons.",
+    "job2" : "Assistance Technique, Relation/Clients, Ventes et Fidelisation.",
+    "title_job2" : "Responsable commercial",
+    "job3" : "Qualifieur PABX, prise de renseignements aupres des gerants pour leur fournir un service telephonie adaptee a leur besoin en partenariat avec Orange.",
+    "title_job3": "Ingenieur commercial",
+    "prenom" : "Prenom",
+    "nom" : "Nom",
+    "message" : "Ecrire un message",
+    "mention" : "Mentions légales",
+    "conception" : "2023 Conception et réalisation par",
+    "droit" : "Tous droits réservés.",
+    "envoyer" : "Envoyer"
+  },
+
+  "Blog" : {
+    "h1" : "Bienvenu dans mon Blog"
+  },
+
+  "Login" : {
+    "email" : "Email",
+    "password" : "Mot de passe",
+    "connect" : "Se connecter"
+  },
+
+  "footer": {}
+}
