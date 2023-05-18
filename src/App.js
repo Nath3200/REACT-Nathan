@@ -10,6 +10,7 @@ import PageError from './pages/PageError/PageError';
 import Blog from './pages/Blog/Blog';
 import Counter from './components/Counter/Counter';
 import Projet from './pages/Projet/Projet';
+import WorkInProgress from './pages/WorkInProgress/WorkInProgress';
 import List from './components/List/List';
 import Toogle from './components/Toogle/Toogle';
 import Metier from './components/Metier/Metier';
@@ -21,7 +22,6 @@ import MouseMoove from './pages/MouseMoove/MouseMoove';
 
 import PageUne from './components/PageUne/PageUne';
 import ApiGeneral from './components/ApiGeneral/ApiGeneral';
-import AxiosGet from './components/AxiosGet/AxiosGet';
 import AxiosPost from './components/AxiosPost/AxiosPost';
 import GetArticle from './components/GetArticle/GetArticle';
 import GetArticleById from './components/GetArticleById/GetArticleById';
@@ -36,7 +36,6 @@ import UseLocation from './components/UseLocation/UseLocation';
 
 import AddArticle from './pages/Articles/AddArticle';
 import DeleteArticle from './pages/Articles/DeleteArticle';
-import UpdateArticle from './pages/Articles/UpdateArticle';
 import NavbarOffcanvas from 'react-bootstrap/esm/NavbarOffcanvas';
 import DataTableBasique from './pages/DataTable/DataTableBasique';
 import DataTableSort from './pages/DataTable/DataTableSort';
@@ -48,7 +47,14 @@ import HookSelect from './pages/HookForm/HookSelect';
 import HfBlur from './pages/HookForm/HfBlur';
 import FormikExemple from './pages/HookForm/FormikExemple';
 
+import FilterSection from './pages/FilterSection/FilterSection';
+import FilterSearch from './pages/FilterSection/FilterSearch';
+import FindSection from './pages/FilterSection/FindSection';
 
+import UseReducerSection from './pages/UseReducerSection/UseReducerSection';
+import UseReducerAdvanced from './pages/UseReducerAdvanced/UseReducerAdvanced';
+import UseMemoSectionAdvanced from './pages/UseMemoSection/UseMemoSectionAdvanced';
+import UseCallBack from './pages/UseCallBack/UseCallBack';
 
 function App() {
   // les PROPS sert a utiliser une valeur plusieurs fois, on doit declarer un usestate avec usf
@@ -65,6 +71,7 @@ function App() {
         <Route path="/Metier" element={<Metier/>}/>
         <Route path="/article/:id" element={<Articles/>}/>
         <Route path="/Projet" element={<Projet/>}/>
+        <Route path="/WorkInProgress" element={<WorkInProgress/>}/>
 
         <Route path="/UseEffectCompo" element={<UseEffectCompo/>}/>
         <Route path="/SetIntervalCompo" element={<SetIntervalCompo/>}/>
@@ -72,7 +79,6 @@ function App() {
         
         <Route path="/PageUne" element={<PageUne/>}/>     
         <Route path="/ApiGeneral" element={<ApiGeneral/>}/>
-        <Route path="/AxiosGet" element={<AxiosGet/>}/>
         <Route path="/AxiosPost" element={<AxiosPost/>}/>
         <Route path="/GetArticle" element={<GetArticle/>}/>
         <Route path="/GetArticleById" element={<GetArticleById/>}/>
@@ -87,7 +93,6 @@ function App() {
 
         <Route path="/AddArticle" element={<AddArticle/>}/>
         <Route path="/DeleteArticle" element={<DeleteArticle/>}/>
-        <Route path="/UpdateArticle" element={<UpdateArticle/>}/>
         
         <Route path="/Login" element={<Login/>}/>
 
@@ -99,7 +104,16 @@ function App() {
         <Route path="/HKbase" element={<HKbase/>}/>
         <Route path="/HookSelect" element={<HookSelect/>}/>
         <Route path="/HfBlur" element={<HfBlur/>}/>
-        <Route path="/FormikExemple" element={<FormikExemple/>}/>        
+        <Route path="/FormikExemple" element={<FormikExemple/>}/>    
+
+        <Route path="/FilterSection" element={<FilterSection/>}/>
+        <Route path="/FilterSearch" element={<FilterSearch/>}/>
+        <Route path="/FindSection" element={<FindSection/>}/>
+
+        <Route path="/UseReducerSection" element={<UseReducerSection/>}/>
+        <Route path="/UseReducerAdvanced" element={<UseReducerAdvanced/>}/>
+        <Route path="/UseMemoSectionAdvanced" element={<UseMemoSectionAdvanced/>}/>
+        <Route path="/UseCallBack" element={<UseCallBack/>}/>
        
         <Route path="*" element={<PageError/>}/>
      </Routes>

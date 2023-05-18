@@ -14,6 +14,12 @@ const Login = () => {
     
   }, []);
 
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxChange = (event) => {
+    setIsChecked(event.target.checked);
+  };
+
 const handleSubmit = (e) => {
   console.log("worked")
   e.preventDefault()
@@ -55,12 +61,24 @@ const handlePassword= (e) => {
           <label htmlFor="">{t("Login.email")}</label>
           <input type="email" value={email} onChange={handleEmail} required/></div>
           <div><label htmlFor="">{t("Login.password")}</label>
-          <input type="password" value={password} onChange={handlePassword} required/>
+          <input type={isChecked === false ? 'password' : ''} value={password} onChange={handlePassword} required/>
           </div>
+
+          <div>
+      <label>
+        <input
+          type="checkbox"
+          checked={isChecked}
+          onChange={handleCheckboxChange}
+        />
+        Checkbox
+      </label>
+    </div>
+          
         <button type='submit'>{t("Login.connect")}</button>
       </form>
       {authError &&
-      <h1 className='text-danger'>mauvais user ou mot de passe</h1>
+      <h1 className='text-danger'>Mauvais user ou mot de passe</h1>
       }
         </div>    
       </div>

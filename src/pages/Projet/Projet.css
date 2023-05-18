@@ -7,7 +7,7 @@
 }
 .container{
     max-width: 500px;
-    height: 330px;
+    height: 300px;
     margin: 0 auto;
     padding: 30px;
     border-radius: 30px;
@@ -21,9 +21,10 @@
     height: 200px;
     width: 200px;
     margin-left: 20px;
-    float:left
+    float:left;
+    border-radius: 30px;
 }
-.jeu{
+/* .jeu{
     margin-left: 300px;  
 }
 .mode{
@@ -38,4 +39,16 @@
     width: 100px;
     margin-left: 20px;
     float:right
+} */
+.language{
+    text-align: center;   
+}
+.link{
+    color: rgb(112, 25, 252);
+    font-style: italic;
+    font-weight: normal;
+    margin-left:5px;
+}
+.article{
+    margin-top: 30px;
 }

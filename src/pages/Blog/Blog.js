@@ -21,11 +21,27 @@ const Blog = () => {
            setName(cb)
         }
 
-  const [data, setData] = useState();
-  const [activeFooter, setActiveFooter]= useState(false);
+  // const [activeFooter, setActiveFooter]= useState(false);
+  
+  const [data, setData] = useState([]);
   const [language, setLanguage] = useState();
   // const HandleFooter = () => {setActiveFooter(!activeFooter)
   // }
+
+  const [valueInput, setvalueInput] = useState("");
+  const [Resultat, setResultat] = useState([]);
+
+    const handleInput = (e) => {
+      console.log("fonction ouverte")
+      const valueRecherche = e.target.value
+      console.log("valueRecherche", valueRecherche)
+      setvalueInput(valueRecherche)
+
+      const resultFilter = data.filter(user => user.data.toLocaleLowerCase().includes(valueRecherche))
+      console.log("resultFilter", resultFilter)
+      setResultat(resultFilter)
+    }
+
   const {t} = useTranslation();
 
 useEffect(() => {
@@ -36,7 +52,7 @@ useEffect(() => {
     "AD_PageSize" : "500"
   }
 }).then(function(response){
-  console.log(response.data);
+  console.log(response.data.Table);
   setData(response.data.Table);
 });
 }, []);
@@ -70,6 +86,24 @@ useEffect(() => {
 	  </header>
 
     <h1>{t("Blog.h1")}</h1>
+
+    <div>
+      <input type="text" value={valueInput} onChange={handleInput} />
+      {Resultat.length >0 ? (
+        <div>
+          <h6>Resultat de la recherche</h6>
+          <div>{Resultat.map(user=>(
+            <div key={user.id}>
+            {user.data} 
+            </div>
+          ))}
+          </div>
+        </div>
+      ) : 
+      (
+        <div>Aucun resultat</div>
+      )}
+    </div>
 
     {
      data && data.map((row)=>(
