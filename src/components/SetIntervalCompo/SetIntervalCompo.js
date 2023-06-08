@@ -22,3 +22,26 @@ useEffect(() => {
 }
 
 export default SetIntervalCompo
+
+
+
+
+
+// import React, {useState, useEffect} from 'react'
+
+// const SetIntervalCompo = () => {
+
+//     const [Time, setTime] = useState(0);
+
+//     useEffect(() => {
+//       const setIntervalId = setInterval(() => {
+        
+//       }, Time);
+//     }, []);
+
+//   return (
+//     <div>SetIntervalCompo</div>
+//   )
+// }
+
+// export default SetIntervalCompo

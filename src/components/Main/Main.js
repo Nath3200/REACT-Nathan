@@ -43,7 +43,7 @@ const {t} = useTranslation()
 						<CardPointFort title="Design" img={design} alt={"Design"} figcaption={t("CV.design")} />
 						<CardPointFort title="Front-end development" img={integration} alt={"Design"} figcaption={t("CV.front")} />
 						<CardPointFort title="Back-end development" img={dev} alt={"Design"} figcaption={t("CV.back")} />
-						<CardPointFort title="SEO" img={seo} alt={"Design"} figcaption={t("CV.seo")} />
+						<CardPointFort title="SEO" img={seo} alt={"Design"} figcaption={t("CV.seo")}/>
 					
 					</div>
 				</section>
@@ -71,7 +71,9 @@ const {t} = useTranslation()
 							<input type="text" id="email" name="email"/><hr />
 							<label htmlFor="message"></label>
 							<textarea placeholder={t("CV.message")} id="message" name="message"/> <hr />
-							<button type='submit' onClick={()=> props.HandleName("test")}>{t("CV.envoyer")}</button>  
+							{/* <button type='submit' onClick={()=> props.HandleName("test")}>{t("CV.envoyer")}</button>   */}
+							<a href="https://wa.me/972555646247?text=I'm%20interested%20in%20your%20car%20for%20sale" target="_blank" rel="noopener noreferrer"><button type='submit' >contact whataspp</button>  </a>
+							
 						
 					</div>
 				</aside>

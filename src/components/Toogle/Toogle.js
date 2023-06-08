@@ -25,3 +25,29 @@ const ActiveToogle = () => {
 }
 
 export default Toogle
+
+
+// FAIT PAR MOI
+
+// import React, {useState} from 'react'
+
+// const Toogle = () => {
+
+//     const [Toogle, setToogle] = useState(false);
+
+//     const ActiveToogle = () => {
+//       setToogle(!Toogle)
+//     }
+
+//   return (
+//     <div className='container'>
+//       <button className='btn btn-succes' onClick={ActiveToogle}>Click me</button>
+//       {
+//         Toogle && 
+//         <div>Je suis le toogle</div>
+//       }
+//     </div>
+//   )
+// }
+
+// export default Toogle

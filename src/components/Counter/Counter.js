@@ -6,8 +6,7 @@ const Counter = () => {
     const [counter, setCounter] = useState(0);
 
     useEffect(() => {
-        document
-        .title = `le compteur est a ${counter}`
+        document.title = `le compteur est a ${counter}`
     }, [counter]);
 
     const Increment = () => {
@@ -32,3 +31,39 @@ const Counter = () => {
 }
 
 export default Counter
+
+
+
+
+// FAIT PAR MOI
+
+// import React, {useEffect, useState} from 'react'
+
+// const Counter = () => {
+
+//     const [Number, setNumber] = useState(0)
+//     useEffect(() => {
+//         document.title = `Le compteur est a ${Number}`
+//     }, [Number]);
+
+//     const Increment = () => {
+//       setNumber(Number +1)
+//     }
+//     const Decrement = () => {
+//         setNumber(Number -1)
+//     }
+//       const Reset = () => {
+//         setNumber(0)
+//     }
+
+//   return (
+//     <div className='container'>
+//         <h1>{Number}</h1>
+//         <button className='btn btn-success' onClick={Increment}>Increment</button>
+//         <button className='btn btn-danger' onClick={Decrement}>Decrement</button>
+//         <button className='btn btn-light' onClick={Reset}>Reset</button>
+//     </div>
+//   )
+// }
+
+// export default Counter

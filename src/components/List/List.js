@@ -7,7 +7,7 @@ id: 1,
 coursImportant: "- React js"
 },{
     id: 2,
-    coursImportant: "- html css"
+    coursImportant: "- Html css"
 },{
     id: 3,
     coursImportant: "- Vanilla javascript"
@@ -23,8 +23,9 @@ coursImportant: "- React js"
             <div className='cours' key={cour.id}>
             {cour.coursImportant} 
             </div>          
-        ))
-}
+        ))  }
+
+
 </div>
 )
 }

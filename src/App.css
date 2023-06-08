@@ -57,8 +57,6 @@ nav .conteneur .flex-menu{
 nav .conteneur .flex-menu a{
   margin: 5px 50px;
   text-decoration: none;
-  color: #49636f;   
-  background-color: none;
   padding: 10px;
   border-radius: 10px;
   transition: .2s;

@@ -8,28 +8,40 @@ import './Blog.css'
 import Introduction from '../../components/Introduction/Introduction';
 import Lien from '../../components/Lien/Lien';
 import axios  from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useFetcher } from 'react-router-dom';
 import i18n from '../../i18n/config';
 import { useTranslation } from 'react-i18next';
+import UseDocumentTitle from '../../components/UseCustoms/UseDocumentTitle';
+import UseFetch from '../../components/UseCustoms/UseFetch';
+import UseWindowSize from '../../components/UseCustoms/UseResize';
+import { useDispatch, useSelector } from 'react-redux';
+import {setArticles, getArticles, setArticleSelected} from "../../redux/slices/blog.slice"
+import {getDarkMode} from "../../redux/slices/darkmode.slice"
 
 const Blog = () => {
 
   const [name, setName] = useState("Nathan Guedj");
         // let name = "nathan guedj"
         // cb = callback
-        const HandleName = (cb)=>{ //importer test du l enfant
+        const HandleName = (cb)=>{ 
            setName(cb)
+           //importer test du l enfant
         }
 
-  // const [activeFooter, setActiveFooter]= useState(false);
-  
   const [data, setData] = useState([]);
   const [language, setLanguage] = useState();
+  // const [activeFooter, setActiveFooter]= useState(false);
   // const HandleFooter = () => {setActiveFooter(!activeFooter)
   // }
 
   const [valueInput, setvalueInput] = useState("");
   const [Resultat, setResultat] = useState([]);
+
+  const dispatch = useDispatch()
+
+  UseDocumentTitle("Nathan Guedj's Blog");
+ // const resize = UseWindowSize();
+ // console.log(resize);
 
     const handleInput = (e) => {
       console.log("fonction ouverte")
@@ -46,6 +58,8 @@ const Blog = () => {
 
 useEffect(() => {
   console.log("mon blog est monte");
+  // il faut vider toutes les variables
+  // il faut loader
   axios.get('https://sabik-547abb.appdrag.site/api/getAllBlog', {
   params: {
     "AD_PageNbr" : "1",
@@ -54,9 +68,19 @@ useEffect(() => {
 }).then(function(response){
   console.log(response.data.Table);
   setData(response.data.Table);
-});
+}).catch(error=>{console.log(error)});
 }, []);
 
+const {Data, Loading, Error} = UseFetch('https://sabik-547abb.appdrag.site/api/getAllBlog')
+dispatch(setArticles(data))
+
+const GETARTICLES = useSelector(getArticles)
+//const GETDARKMODE = useSelector((state)=> state.darkmode.isDarkMode)
+const GETDARKMODE = useSelector(getDarkMode)
+//console.log("GETDARKMODE==>",GETDARKMODE)
+useEffect(() => {
+  console.log("GETDARKMODE",GETDARKMODE)
+}, [GETDARKMODE]);
 useEffect(() => {
   const handleChangeLanguage = () => {
     // La langue a changé, faites quelque chose ici...
@@ -87,7 +111,7 @@ useEffect(() => {
 
     <h1>{t("Blog.h1")}</h1>
 
-    <div>
+    {/* <div>
       <input type="text" value={valueInput} onChange={handleInput} />
       {Resultat.length >0 ? (
         <div>
@@ -103,22 +127,36 @@ useEffect(() => {
       (
         <div>Aucun resultat</div>
       )}
-    </div>
+    </div> */}
 
     {
-     data && data.map((row)=>(
+    //  data && data
+     GETARTICLES?.map((row)=>(
       
-      <div  className='bg-secondary shadow-lg rounded m-3 p-3'>
+      <div key={row.id} onClick={() => {
+        dispatch(setArticleSelected(row.id))
+      }} className=' shadow-lg rounded m-3 p-3' style={{
+        backgroundColor : GETDARKMODE === true ? "black": "white",
+        color:GETDARKMODE == true ? "white": "",
+        }}>
           <h2>{language==="fr" ?  row.title : row.titleEN && language==="en" ?  row.titleEN : row.title }</h2>
-          <Link key={row.id}className="text-decoration-none text-dark" to={`/article/${row.id}`}>
-            <img src={row.image} className='img-fluid'></img>
-          </Link>
-          <p>{language==="fr" ? row.article : row.articleEN && language==="en" ?  row.articleEN : row.article}</p>
-          <p>{row.auteur}</p>
-      </div>
+          <Link key={row.id}className="text-decoration-none text-dark" to={`/article/${row.id}`}></Link>              
+          
+      <img src={row.image} height={30} className='img-fluid border border-danger'/>
       
+      <span>{language==="fr" ? row.article : row.articleEN && language==="en" ?  row.articleEN : row.article}</span>
+
+          {/* <p>{row.auteur}</p> */}
+      </div>      
   ))
+    
     }
+    {/* {Error && <p>Error</p>}
+    {Loading && <p>Loading</p>}
+    {Error && <p>Error</p>} */}
+    <Link to="/">
+      <button className='btn btn-primary'>Retourner a la âge d accueil</button>
+    </Link>
     
     {/* <Layout footer={activeFooter}>
 

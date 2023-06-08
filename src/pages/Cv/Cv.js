@@ -5,16 +5,24 @@ import Lien from '../../components/Lien/Lien';
 import Sect from '../../components/Sect/Sect';
 import Footer from '../../components/Footer/Footer';
 
+import { useSelector } from 'react-redux';
+import {getDarkMode} from "../../redux/slices/darkmode.slice"
+
 const Cv = () => {
 
     const [name, setName] = useState("Nathan Guedj");
     // let name = "nathan guedj"
     // cb = callback
     const HandleName = (cb)=>{ //importer test du l enfant
-       setName(cb)
-    }
+       setName(cb) }
+
+    const GETDARKMODE = useSelector(getDarkMode)
+    
   return (
-    <div className="">
+    <div className="" style={{
+      backgroundColor : GETDARKMODE === true ? "black": "white",
+      color:GETDARKMODE == true ? "white": "",
+      }}>
       <header>
             <Introduction name={name}/>
 

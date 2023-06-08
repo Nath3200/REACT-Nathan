@@ -2,10 +2,15 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import {setAuth} from '../../redux/slices/auth.slice'
+import { useDispatch } from 'react-redux';
+import './Login.css'
 
 const Login = () => {
 
   const navigate = useNavigate()
+  const dispatch = useDispatch()
+
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [authError, setAuthError] = useState(false);
@@ -13,6 +18,9 @@ const Login = () => {
   useEffect(() => {
     
   }, []);
+
+  // 1 creer deux input email, password
+  // 
 
   const [isChecked, setIsChecked] = useState(false);
 
@@ -41,6 +49,8 @@ const handleSubmit = (e) => {
     setAuthError(false)
     // afin d enlever le message d erreur si je rentre une bonne authentification
     localStorage.setItem("tokenBlog", response.data.Table[0].token);
+
+    dispatch(setAuth(response.data.Table[0]))
     navigate("/")
   }
 });
@@ -53,9 +63,9 @@ const handlePassword= (e) => {
 }
 
   return (
-    <div className='container bg-secondary'>
-      <div className='row justify-content-center align-items-center' style={{height:"80vh"}}>
-        <div className='col-6 rounded shadow bg-light'>
+    
+      <div className='container bg-secondary row justify-content-center align-items-center'style={{height:"100vh"}}> 
+      <div className='col-6 rounded shadow bg-light'>
       <form onSubmit= {handleSubmit}>
         <div>
           <label htmlFor="">{t("Login.email")}</label>
@@ -82,7 +92,7 @@ const handlePassword= (e) => {
       }
         </div>    
       </div>
-    </div>
+   
   )
 }
 

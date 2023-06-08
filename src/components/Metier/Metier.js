@@ -31,3 +31,38 @@ const handleIntermediaire = () => {
 }
 
 export default Metier
+
+
+// FAIT PAR MOI
+
+// import React, {useState} from 'react'
+
+// const Metier = () => {
+
+//   const [State, setState] = useState({
+//     id : 1,
+//     metier : "fullstack dev",
+//     niveau : "en formation"
+//   });
+
+//   const HandleJunior = () => {
+//     setState((Prev)=>({...Prev,niveau:"junior"}))
+//   }
+//   const HandleIntermediaire = () => {
+//     setState((Prev)=>({...Prev,niveau:"intermediaire"}))
+//   }
+//   const HandleSenior = () => {
+//     setState((Prev)=>({...Prev,niveau:"senior"}))
+//   }
+
+//   return (
+//     <div className='container'>
+//       <h1>Je suis {State.metier} {""} {State.niveau}</h1>
+//       <button className='btn btn-success' onClick={HandleJunior}>Junior</button>
+//       <button className='btn btn-danger' onClick={HandleIntermediaire}>Intermediaire</button>
+//       <button className='btn btn-light' onClick={HandleSenior}>Senior</button>
+//     </div>
+//   )
+// }
+
+// export default Metier

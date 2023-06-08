@@ -7,6 +7,10 @@ import axios from "axios";
 // import Mode from "../../assets/img/mode.jpg";
 // import Work from "../../assets/img/work-in-progress.png";
 import { useTranslation } from "react-i18next";
+import UseDocumentTitle from "../../components/UseCustoms/UseDocumentTitle";
+import { useSelector } from "react-redux";
+import { getPseudo } from "../../redux/slices/auth.slice"
+import {getDarkMode} from "../../redux/slices/darkmode.slice"
 
 const Projet = () => {
   const [name, setName] = useState("Nathan Guedj");
@@ -20,8 +24,14 @@ const Projet = () => {
 
   const { t } = useTranslation();
 
+  const GETPSEUDO = useSelector(getPseudo)
+
   const [data, setData] = useState();
   const [stockData, setstockData] = useState();
+
+  const GETDARKMODE = useSelector(getDarkMode)
+
+  UseDocumentTitle("Nathan Guedj's Projects")
 
   useEffect(() => {
     axios
@@ -45,7 +55,10 @@ const Projet = () => {
   };
 
   return (
-    <div>
+    <div style={{
+      backgroundColor : GETDARKMODE === true ? "black": "white",
+      color:GETDARKMODE == true ? "white": "",
+      }}>
       <header className="pro">
         <Introduction name={name} />
 
@@ -55,24 +68,31 @@ const Projet = () => {
       <br />
       <div className="projet">
         <h1>{t("Portfolio.title")}</h1>
+        <h1> {GETPSEUDO}</h1>
       </div>
       {/* Voici mes Projets */}
       <div className="language">
-        <button className="btn btn-outline-dark" onClick={() => handleClick("html")}>
-          HTML/CSS
+        <button className="btn btn-outline-dark" onClick={() => handleClick("html")} >
+          <span className ={`text-${GETDARKMODE=== true ? "light":"dark"}`}>
+            HTML/CSS 
+          </span>
         </button>
         <button className="btn btn-outline-dark" onClick={() => handleClick("javascript")}>
-          JAVASCRIPT
+          <span className ={`text-${GETDARKMODE=== true ? "light":"dark"}`}>
+            JAVASCRIPT
+          </span>
         </button>
         <button className="btn btn-outline-dark" onClick={() => handleClick("react")}>
-          REACT
+          <span className ={`text-${GETDARKMODE=== true ? "light":"dark"}`}>
+            REACT
+          </span>
         </button>
       </div>
       {
      data && data.map((row)=>(
       <div key={row.id} className='container bg-secondary shadow-lg rounded m-3 p-3'>
           <h2>{row.title}</h2>
-          <a className="link" href={row.lien} target="_blank" rel="noopener noreferrer">Lien</a>
+          <a className="link" href={row.lien} target="_blank" rel="noopener noreferrer">{row.lien?"Lien":""}</a>
           <img className="pacman" src={row.image}></img>
           <p className="article">{row.article}</p>
           {/* <p>{row.categorie}</p>        */}

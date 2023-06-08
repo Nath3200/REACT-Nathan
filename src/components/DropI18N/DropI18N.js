@@ -4,8 +4,13 @@ import i18next from '../../i18n/config';
 import flagEnglish from '../../assets/img/flags/flagEnglish.png'
 import drapeauFr from '../../assets/img/flags/drapeauFr.png'
 import { NavDropdown } from 'react-bootstrap';
+import { getDarkMode } from "../../redux/slices/darkmode.slice"
+import { useSelector } from 'react-redux';
 
 const DropI18N = () => {
+
+    const GETDARKMODE = useSelector(getDarkMode)
+  // const [isAuth, setIsAuth] = useState(false);
 
     useTranslation();
     const {t} = useTranslation()
@@ -15,7 +20,9 @@ const DropI18N = () => {
     }
 
     return (
-        <NavDropdown title={t("Lien.Langue")}  >
+
+        
+        <NavDropdown title={t("Lien.Langue")} className={` text-${GETDARKMODE=== true ? "light":"dark"} `}>
             <NavDropdown.Item  >              
                 <div>
                     <img onClick={() => {
