@@ -108,7 +108,7 @@ const Lien = () => {
 
                          
             
-              <NavDropdown.Item as={Link} to="/UseEffectCompo" >UseEffect</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/AppDrag" >AppDrag</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/Counter">Counter</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/list">List</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/Toogle"> Toogle</NavDropdown.Item>

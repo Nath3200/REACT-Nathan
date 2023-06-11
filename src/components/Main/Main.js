@@ -1,5 +1,3 @@
-// le <> remplace une div sauf qu elle est vide
-
 import React from 'react'
 // import profil from "../../assets/img/profil.png"
 import photo from "../../assets/img/photo cv.jpg"
@@ -34,7 +32,7 @@ const {t} = useTranslation()
 				<section id="presentation">
 					<h2>Presentation</h2>
 					<div className="profil-flex">
-						<img src={photo} title={props.name}alt={props.name}/>
+						<img  src={photo} title={props.name}alt={props.name}/>
 						<p>{t("CV.diplome")} <br />
 						{t("CV.principes")} </p>
 					</div>

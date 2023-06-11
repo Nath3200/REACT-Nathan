@@ -1,3 +1,67 @@
-button.watsapp{
-    background-color: green;
-}
+/* Styles pour les appareils mobiles */
+@media (max-width: 768px) {
+    .conteneur.flex-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .profil-flex {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .profil-flex img {
+      width: 100%;
+      
+      margin-bottom: 1em;
+    }
+    
+    .mise-en-avant {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1em;
+    }
+    
+    .mise-en-avant figure {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+    
+    .encart {
+      margin-bottom: 2em;
+    }
+  }
+  
+  /* Styles pour les appareils de taille moyenne à grande */
+  @media (min-width: 769px) {
+    .conteneur.flex-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    
+    aside {
+      width: 30%;
+    }
+    
+    .profil-flex img {
+      max-width: 300px;
+      margin-right: 1em;
+    }
+    
+    .mise-en-avant {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    
+    .mise-en-avant figure {
+      width: 45%;
+    }
+    
+    .encart {
+      margin-bottom: 2em;
+    }
+  }
+  

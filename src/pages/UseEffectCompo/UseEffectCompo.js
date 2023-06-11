@@ -5,7 +5,7 @@ import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import { Button } from 'react-bootstrap';
 
-const UseEffectCompo = () => {
+const AppDrag = () => {
 
     const [data, setData] = useState();
 
@@ -38,4 +38,4 @@ const UseEffectCompo = () => {
   )
 }
 
-export default UseEffectCompo
+export default AppDrag

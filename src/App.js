@@ -16,7 +16,7 @@ import Toogle from './components/Toogle/Toogle';
 import Metier from './components/Metier/Metier';
 import Articles from './pages/Articles/Articles';
 
-import UseEffectCompo from './pages/UseEffectCompo/UseEffectCompo';
+import AppDrag from './pages/UseEffectCompo/UseEffectCompo';
 import SetIntervalCompo from './components/SetIntervalCompo/SetIntervalCompo';
 import MouseMoove from './pages/MouseMoove/MouseMoove';
 
@@ -76,7 +76,7 @@ function App() {
         <Route path="/Projet" element={<Projet/>}/>
         <Route path="/WorkInProgress" element={<WorkInProgress/>}/>
 
-        <Route path="/UseEffectCompo" element={<UseEffectCompo/>}/>
+        <Route path="/AppDrag" element={<AppDrag/>}/>
         <Route path="/SetIntervalCompo" element={<SetIntervalCompo/>}/>
         <Route path="/MouseMoove" element={<MouseMoove/>}/>
         
