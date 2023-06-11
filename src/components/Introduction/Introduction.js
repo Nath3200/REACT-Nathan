@@ -14,7 +14,9 @@ const {t} = useTranslation()
     <div className="conteneur">
 				<div className="normal-flex">
 					<div className="haut-gauche">
-						<h1 className={`text-${changeColor}`} onClick={()=> setChangecolor("blue")}>Nathan Guedj</h1>
+						<h1 className={`text-${changeColor}`} 
+						// onClick={()=> setChangecolor("blue")}
+						>Nathan Guedj</h1>
 						{/* {name} */}
 						<strong>Communication</strong> /
 						<strong>Marketing</strong> /

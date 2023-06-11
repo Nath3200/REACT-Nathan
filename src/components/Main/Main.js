@@ -72,7 +72,7 @@ const {t} = useTranslation()
 							<label htmlFor="message"></label>
 							<textarea placeholder={t("CV.message")} id="message" name="message"/> <hr />
 							{/* <button type='submit' onClick={()=> props.HandleName("test")}>{t("CV.envoyer")}</button>   */}
-							<a href="https://wa.me/972555646247?text=I'm%20interested%20in%20your%20car%20for%20sale" target="_blank" rel="noopener noreferrer"><button type='submit' >contact whataspp</button>  </a>
+							<a href="https://wa.me/972555646247?text=I'm%20interested%20in%20your%20car%20for%20sale" target="_blank" rel="noopener noreferrer"><button type='submit' classname='watsapp'>  Contact Whatsapp</button>  </a>
 							
 						
 					</div>

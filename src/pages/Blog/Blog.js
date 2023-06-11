@@ -101,7 +101,10 @@ useEffect(() => {
 }, []);
 
   return (
-    <>
+    <div style={{
+      backgroundColor : GETDARKMODE === true ? "black": "white",
+      color:GETDARKMODE == true ? "white": "",
+      }}>
     <header className='blog'>
             <Introduction name={name}/>
 
@@ -109,7 +112,10 @@ useEffect(() => {
 
 	  </header>
 
-    <h1>{t("Blog.h1")}</h1>
+    <h1 className=' shadow-lg rounded m-3 p-3' style={{
+        backgroundColor : GETDARKMODE === true ? "black": "white",
+        color:GETDARKMODE == true ? "white": "",
+        }}>{t("Blog.h1")}</h1>
 
     {/* <div>
       <input type="text" value={valueInput} onChange={handleInput} />
@@ -164,7 +170,7 @@ useEffect(() => {
        <button onClick={() => HandleFooter()}>active footer</button>
 
     </Layout> */}
-    </>
+    </div>
   )
 }
 
