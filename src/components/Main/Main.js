@@ -14,7 +14,7 @@ const CardPointFort = (props) => {
 	<>	
 	  <figure>
 	     <h4>{props.title}</h4>
-	     <img src={props.img} title="Catégorie : graphisme" alt="Design"/>
+	     <img src={props.img} title={props.title} alt={props.title}/>
 	     <figcaption>{props.figcaption}</figcaption>
       </figure>
 	</>
@@ -39,9 +39,9 @@ const {t} = useTranslation()
 					<div className="mise-en-avant">
 
 						<CardPointFort title="Design" img={design} alt={"Design"} figcaption={t("CV.design")} />
-						<CardPointFort title="Front-end development" img={integration} alt={"Design"} figcaption={t("CV.front")} />
-						<CardPointFort title="Back-end development" img={dev} alt={"Design"} figcaption={t("CV.back")} />
-						<CardPointFort title="SEO" img={seo} alt={"Design"} figcaption={t("CV.seo")}/>
+						<CardPointFort title="Front-end development" img={integration} alt={"Front-end development"} figcaption={t("CV.front")} />
+						<CardPointFort title="Back-end development" img={dev} alt={"Back-end development"} figcaption={t("CV.back")} />
+						<CardPointFort title="SEO" img={seo} alt={"SEO"} figcaption={t("CV.seo")}/>
 					
 					</div>
 				</section>

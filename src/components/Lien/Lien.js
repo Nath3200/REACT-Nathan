@@ -4,12 +4,12 @@ import React,{useEffect, useState} from 'react';
 import "./Lien.css"
 import { Link } from 'react-router-dom'
 
-// import {Dropdown} from "react-bootstrap"
+import {Dropdown} from "react-bootstrap"
 // import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-// import Offcanvas from 'react-bootstrap/Offcanvas';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 
 import DropI18N from '../DropI18N/DropI18N'
 import { useTranslation } from 'react-i18next'
@@ -22,11 +22,15 @@ import { getDarkMode, setDarkMode } from "../../redux/slices/darkmode.slice"
 
 const Lien = () => {
 
-  const dispatch = useDispatch() // on instancie la methode qui permettra de modifier notre state de redux
+  const dispatch = useDispatch() 
+  // on instancie la methode qui permettra de modifier notre state de redux
 
   const GETDARKMODE = useSelector(getDarkMode)
-  // const [isAuth, setIsAuth] = useState(false);
   const [darkMode, setdarkMode] = useState(false);
+     useEffect(() => {
+     console.log("darkMode state",GETDARKMODE)
+     }, [GETDARKMODE])
+
   let location = useLocation()
   // console.log("location", location.pathname)
 
@@ -36,24 +40,21 @@ const Lien = () => {
 
   UseDocumentTitle("Nathan Guedj's CV")
 
-  useEffect(() => {
-    console.log("darkMode state",GETDARKMODE)
-  }, [GETDARKMODE])
-
   const DarkMode = () => {
     setdarkMode(!darkMode)
     dispatch(setDarkMode(!GETDARKMODE))
-   // darkMode === false ? setdarkMode(true) : setdarkMode(false)huhi
+   //ou darkMode === false ? setdarkMode(true) : setdarkMode(false)huhi
   }
 
-//   useEffect(() => {
-//   if (localStorage.getItem("tokenBlog")) {
-//     console.log("localstorage plein je suis auth")
-//     // setIsAuth(true)
-//   }else{
-//     console.log("je ne suis pas auth")
-//     setIsAuth(false)}  
-// }, []);
+const [isAuth, setIsAuth] = useState(false);
+  useEffect(() => {
+  if (localStorage.getItem("tokenBlog")) {
+    console.log("localstorage plein je suis auth")
+    setIsAuth(true)
+  }else{
+    console.log("je ne suis pas auth")
+    setIsAuth(false)}  
+}, []);
 
   
 
@@ -64,13 +65,27 @@ const Lien = () => {
   // }
 
   return (
+    <>
+    {["sm"].map((expand) => (
+    <Navbar key={expand}  expand={expand} className="mb-3">
+      {/* bg="warning" */}
 
-    <Navbar>
-    <div className="conteneur" >
-        <div className="flex-menu">
+      
+      <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Offcanvas
+              id={`offcanvasNavbar-expand-${expand}`}
+              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+              placement="end">
+
+      <Offcanvas.Body>
+      <Nav className="justify-content-center flex-grow-1 pe-3">
+
+    {/* <div className="conteneur" >
+        <div className="flex-menu"> */}
 
           
           {/* onMouseOver={()=> changeColor()} */}
+          
             <Nav.Link as={Link} to="/Projet" className='text-decoration-none' 
             // style={{color :   GETDARKMODE === true ? "white!important" : "black!important" }} 
             >
@@ -157,10 +172,17 @@ const Lien = () => {
             </NavDropdown> 
                    
             {/* <Link><button className='btn btn-danger'/>Click</Link> */}
-          </div> 
-    </div>
+          {/* </div> 
+    </div> */}
+    </Nav>
+    </Offcanvas.Body>
+    </Navbar.Offcanvas>
+    
 </Navbar>
-  )
+))}
+
+</>
+  );
 }
 
 export default Lien
