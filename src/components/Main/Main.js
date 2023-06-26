@@ -12,7 +12,7 @@ const CardPointFort = (props) => {
 
   return(
 	<>	
-	  <figure>
+	  <figure className="img-fluid">
 	     <h4>{props.title}</h4>
 	     <img src={props.img} title={props.title} alt={props.title}/>
 	     <figcaption>{props.figcaption}</figcaption>
@@ -27,8 +27,9 @@ const Main = (props) => {
 const {t} = useTranslation()
 	
   return (
-    		<main>
-			<div className="conteneur flex-main">
+    		<main className="container-{breakpoint} flex-main ">
+			{/* <div className="conteneur flex-main"> */}
+			
 				<section id="presentation">
 					<h2>Presentation</h2>
 					<div className="profil-flex">
@@ -36,7 +37,9 @@ const {t} = useTranslation()
 						<p>{t("CV.diplome")} <br />
 						{t("CV.principes")} </p>
 					</div>
-					<div className="mise-en-avant">
+
+					{/* <div className="mise-en-avant"> */}
+					<div className='flex-main'>
 
 						<CardPointFort title="Design" img={design} alt={"Design"} figcaption={t("CV.design")} />
 						<CardPointFort title="Front-end development" img={integration} alt={"Front-end development"} figcaption={t("CV.front")} />
@@ -45,7 +48,7 @@ const {t} = useTranslation()
 					
 					</div>
 				</section>
-				<aside>
+				<aside className=''>
 					<div className="encart">
 						<h3>{t("CV.qui")}</h3>
 						<p>{t("CV.description")}</p>
@@ -58,6 +61,7 @@ const {t} = useTranslation()
 							<li>{t("CV.title_job3")} - <br />{t("CV.job3")}<br /> Business Services</li>
 						</ul>
 					</div>
+					
 					<div className="encart">
 						<h3>Contact</h3>
 				
@@ -70,12 +74,12 @@ const {t} = useTranslation()
 							<label htmlFor="message"></label>
 							<textarea placeholder={t("CV.message")} id="message" name="message"/> <hr />
 							{/* <button type='submit' onClick={()=> props.HandleName("test")}>{t("CV.envoyer")}</button>   */}
-							<a href="https://wa.me/972555646247?text=I'm%20interested%20in%20your%20car%20for%20sale" target="_blank" rel="noopener noreferrer"><button type='submit' classname='watsapp'>  Contact Whatsapp</button>  </a>
-							
+							<a href="https://wa.me/972555646247?text=I'm%20interested%20in%20your%20CV%20for%20dev" target="_blank" rel="noopener noreferrer">
+							<button type='submit' classname="btn btn-success">  Contact Whatsapp</button></a>							
 						
 					</div>
 				</aside>
-			</div>
+			
 		</main>
   )
 }

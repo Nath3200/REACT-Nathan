@@ -54,6 +54,7 @@ import FilterSearch from './pages/FilterSection/FilterSearch';
 import FindSection from './pages/FilterSection/FindSection';
 
 import PresUseState from './pages/UseStateSection/PresUseState';
+import PresUseEffect from './pages/UseEffectSection/PresUseEffect';
 import UseReducerSection from './pages/UseReducerSection/UseReducerSection';
 import UseReducerAdvanced from './pages/UseReducerAdvanced/UseReducerAdvanced';
 import UseMemoSectionAdvanced from './pages/UseMemoSection/UseMemoSectionAdvanced';
@@ -116,6 +117,7 @@ function App() {
         <Route path="/FindSection" element={<FindSection/>}/>
 
         <Route path="/PresUseState" element={<PresUseState/>}/>
+        <Route path="/PresUseEffect" element={<PresUseEffect/>}/>
         <Route path="/UseReducerSection" element={<UseReducerSection/>}/>
         <Route path="/UseReducerAdvanced" element={<UseReducerAdvanced/>}/>
         <Route path="/UseMemoSectionAdvanced" element={<UseMemoSectionAdvanced/>}/>

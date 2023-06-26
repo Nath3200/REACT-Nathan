@@ -67,7 +67,7 @@ const [isAuth, setIsAuth] = useState(false);
   return (
     <>
     {["sm"].map((expand) => (
-    <Navbar key={expand}  expand={expand} className="mb-3">
+    <Navbar key={expand}  expand={expand} className="mb-3" >
       {/* bg="warning" */}
 
       
@@ -77,8 +77,8 @@ const [isAuth, setIsAuth] = useState(false);
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end">
 
-      <Offcanvas.Body>
-      <Nav className="justify-content-center flex-grow-1 pe-3">
+      <Offcanvas.Body >
+      <Nav className="justify-content-center flex-grow-1 pe-3" >
 
     {/* <div className="conteneur" >
         <div className="flex-menu"> */}
@@ -119,10 +119,11 @@ const [isAuth, setIsAuth] = useState(false);
               
             <NavDropdown
               
-             variant="dark" id={`offcanvasNavbarDropdown-expand-`} title = "DROPDOWN">
+             variant="black" id={`offcanvasNavbarDropdown-expand-`} title = "DROPDOWN" >
 
                          
-            
+              <NavDropdown.Item as={Link} to="/PresUseState"> PresUseState</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/PresUseEffect"> PresUseEffect</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/AppDrag" >AppDrag</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/Counter">Counter</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/list">List</NavDropdown.Item>
@@ -161,7 +162,6 @@ const [isAuth, setIsAuth] = useState(false);
               <NavDropdown.Item as={Link} to="/FilterSearch"> FilterSearch</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/FindSection"> FindSection</NavDropdown.Item>
 
-              <NavDropdown.Item as={Link} to="/PresUseState"> PresUseState</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/UseReducerSection"> UseReducerSection</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/UseReducerAdvanced"> UseReducerAdvanced</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/UseMemoSectionAdvanced"> UseMemoSectionAdvanced</NavDropdown.Item>

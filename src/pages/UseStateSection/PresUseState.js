@@ -9,7 +9,7 @@ const PresUseState = () => {
 
     <div className='container' style={{height:"80vh"}}>
     <h1>Presentation du Use State</h1>
-    <p>Use State est une fonction dela bibliotheque REACT qui permet de creer et gerer des etats locaux dans des composants fonctionnels.</p>
+    <p>Use State est une fonction de la bibliotheque REACT qui permet de creer et gerer des etats locaux dans des composants fonctionnels.</p>
     <div className='bg-dark text-light p-5 rounded-4' onClick={()=>{handleClick('const [state,setState] = useState("")')}
     }>
         <p>const [state,setState] = useState("")</p>
