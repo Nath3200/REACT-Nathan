@@ -117,6 +117,8 @@ const [isAuth, setIsAuth] = useState(false);
                   }} >Logout</Nav.Link> }
 
               
+            { isAuth &&    
+
             <NavDropdown
               
              variant="black" id={`offcanvasNavbarDropdown-expand-`} title = "DROPDOWN" >
@@ -170,6 +172,7 @@ const [isAuth, setIsAuth] = useState(false);
             
            
             </NavDropdown> 
+              }
                    
             {/* <Link><button className='btn btn-danger'/>Click</Link> */}
           {/* </div> 

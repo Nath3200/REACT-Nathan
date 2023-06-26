@@ -64,18 +64,18 @@ const handlePassword= (e) => {
 
   return (
     
-      <div className='container bg-secondary row justify-content-center align-items-center'style={{height:"100vh"}}> 
-      <div className='col-6 rounded shadow bg-light'>
+      <div className=' bg-secondary row justify-content-center align-items-center'style={{height:"100vh", width:"100%"}}> 
+      <div className='container col-6 rounded shadow bg-light' >
       <form onSubmit= {handleSubmit}>
-        <div>
-          <label htmlFor="">{t("Login.email")}</label>
+        <div><br />
+          <label htmlFor="">{t("Login.email")}</label><br />
           <input type="email" value={email} onChange={handleEmail} required/></div>
-          <div><label htmlFor="">{t("Login.password")}</label>
+          <div><label htmlFor="">{t("Login.password")}</label><br />
           <input type={isChecked === false ? 'password' : ''} value={password} onChange={handlePassword} required/>
           </div>
 
           <div>
-      <label>
+      <label><br />
         <input
           type="checkbox"
           checked={isChecked}
@@ -84,7 +84,7 @@ const handlePassword= (e) => {
         Checkbox
       </label>
     </div>
-          
+          <br />
         <button type='submit'>{t("Login.connect")}</button>
       </form>
       {authError &&
