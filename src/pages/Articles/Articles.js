@@ -30,7 +30,7 @@ const Articles = () => {
   return (
     <div>
       
-        <div className='row justify-content-center'>
+        <div className='container row justify-content-center'>
             
             {data &&
             <div className='col-10 bg-light shadow rounded-4 m-3 p-3'>

@@ -7,7 +7,7 @@ const Footer = (props) => {
 const {t} = useTranslation()
 
   return (
-    <footer className='container-fluid'>
+    <footer className='container-fluid' style={{width:"100%"}}>
 			<nav className=""><a href="">Informations</a> - <a href="">{t("CV.mention")}</a> - <a href="">Contact</a></nav>
 			<p className="">© {t("CV.conception")} Nathan Guedj. {t("CV.droit")}</p>
       {/* {props.name} */}

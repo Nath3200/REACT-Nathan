@@ -64,7 +64,7 @@ const handlePassword= (e) => {
 
   return (
     
-      <div className=' bg-secondary row justify-content-center align-items-center'style={{height:"100vh", width:"100%"}}> 
+      <div className='bloc bg-secondary row justify-content-center align-items-center'style={{height:"100vh"}}> 
       <div className='container col-6 rounded shadow bg-light' >
       <form onSubmit= {handleSubmit}>
         <div><br />

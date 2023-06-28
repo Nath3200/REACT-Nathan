@@ -1,13 +1,12 @@
 /* Styles pour les appareils mobiles */
 
-/* @media (max-width: 768px) {
-    .conteneur.flex-main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+ @media screen and (max-width: 900px) {
+    .conteneur {
+
+      width: 90%;
     }
     
-    .profil-flex {
+    /* .profil-flex {
       flex-direction: column;
       align-items: center;
     }
@@ -31,8 +30,8 @@
     
     .encart {
       margin-bottom: 2em;
-    }
-  } */
+    } */
+  } 
   
   /* Styles pour les appareils de taille moyenne à grande */
 
@@ -66,4 +65,4 @@
       margin-bottom: 2em;
     }
   }
-   */
+   

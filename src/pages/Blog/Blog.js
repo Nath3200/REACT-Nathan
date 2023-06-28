@@ -143,10 +143,10 @@ useEffect(() => {
         dispatch(setArticleSelected(row.id))
       }} className=' shadow-lg rounded m-3 p-3' style={{
         backgroundColor : GETDARKMODE === true ? "black": "white",
-        color:GETDARKMODE == true ? "white": "",
+        color:GETDARKMODE == true ? "white": ""
         }}>
           <h2>{language==="fr" ?  row.title : row.titleEN && language==="en" ?  row.titleEN : row.title }</h2>
-          <Link key={row.id}className="text-decoration-none text-dark" to={`/article/${row.id}`}></Link>              
+          <Link key={row.id} className="text-decoration-none text-dark" to={`/article/${row.id}`}></Link>              
           
       <img src={row.image} height={30} className='img-fluid border border-danger'/>
       

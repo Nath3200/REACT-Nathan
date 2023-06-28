@@ -27,7 +27,7 @@ const Main = (props) => {
 const {t} = useTranslation()
 	
   return (
-    		<main className="container-{breakpoint} flex-main ">
+    		<main className="conteneur container-{breakpoint} flex-main ">
 			{/* <div className="conteneur flex-main"> */}
 			
 				<section id="presentation">
