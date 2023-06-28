@@ -27,8 +27,8 @@ const Main = (props) => {
 const {t} = useTranslation()
 	
   return (
-    		<main className="conteneur container-{breakpoint} flex-main ">
-			{/* <div className="conteneur flex-main"> */}
+    		<main className="container-{breakpoint} flex-main ">
+			<div className="conteneur flex-main">
 			
 				<section id="presentation">
 					<h2>Presentation</h2>
@@ -79,7 +79,7 @@ const {t} = useTranslation()
 						
 					</div>
 				</aside>
-			
+			</div>
 		</main>
   )
 }

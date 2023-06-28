@@ -2,8 +2,8 @@
     background-color: rgb(227, 161, 8);
 }
 .img-fluid{
-    height: 200vh;
-    width: 300vh;
-    margin-right: 20vh;
+    height: 200px;
+    width: 300px;
+    margin-right: 20px;
     float:left;
 }

@@ -65,9 +65,9 @@ const handlePassword= (e) => {
   return (
     
       <div className='bloc bg-secondary row justify-content-center align-items-center'style={{height:"100vh"}}> 
-      <div className='container col-6 rounded shadow bg-light' >
+      <div className='center container col-6 rounded shadow bg-light' >
       <form onSubmit= {handleSubmit}>
-        <div><br />
+        <div>
           <label htmlFor="">{t("Login.email")}</label><br />
           <input type="email" value={email} onChange={handleEmail} required/></div>
           <div><label htmlFor="">{t("Login.password")}</label><br />

@@ -9,7 +9,7 @@
   
   .container {
     max-width: 32em;
-    height: 19em;
+    height:55vh;
     margin: 0 auto;
     padding: 0.9em;
     border-radius: 1.9em;
@@ -43,5 +43,6 @@
   
   .article {
     margin-top: -0.2em;
+   
   }
   

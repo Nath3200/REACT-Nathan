@@ -90,6 +90,7 @@ const Projet = () => {
       </div>
       {
      data && data.map((row)=>(
+      
       <div key={row.id} className='container bg-secondary shadow-lg rounded m-3 p-3'>
           <h2>{row.title}</h2>
           <a className="link" href={row.lien} target="_blank" rel="noopener noreferrer">{row.lien?"Lien":""}</a>
@@ -97,6 +98,7 @@ const Projet = () => {
           <p className="article">{row.article}</p>
           {/* <p>{row.categorie}</p>        */}
       </div>
+     
   ))
     }
       {/* <article className="container">

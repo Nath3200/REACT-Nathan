@@ -1,10 +1,4 @@
 /* Styles pour les appareils mobiles */
-
- @media screen and (max-width: 900px) {
-    .conteneur {
-
-      width: 90%;
-    }
     
     /* .profil-flex {
       flex-direction: column;
@@ -31,7 +25,7 @@
     .encart {
       margin-bottom: 2em;
     } */
-  } 
+   
   
   /* Styles pour les appareils de taille moyenne à grande */
 
