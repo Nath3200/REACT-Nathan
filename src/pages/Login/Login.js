@@ -64,28 +64,24 @@ const handlePassword= (e) => {
 
   return (
     
-      <div className='bloc bg-secondary row justify-content-center align-items-center'style={{height:"100vh"}}> 
-      <div className='center container col-6 rounded shadow bg-light' >
+      <div className='bg-secondary row justify-content-center align-items-center' style={{height:"100vh"}}> 
+      <div className='bloc center container col-3 rounded shadow bg-light' >
       <form onSubmit= {handleSubmit}>
         <div>
           <label htmlFor="">{t("Login.email")}</label><br />
-          <input type="email" value={email} onChange={handleEmail} required/></div>
-          <div><label htmlFor="">{t("Login.password")}</label><br />
-          <input type={isChecked === false ? 'password' : ''} value={password} onChange={handlePassword} required/>
+          <input className='blocs' type="email" value={email} onChange={handleEmail} required/></div>
+        <div> <br />
+          <label htmlFor="">{t("Login.password")}</label><br />
+          <input className='blocs' type={isChecked === false ? 'password' : ''} value={password} onChange={handlePassword} required/>
           </div>
 
-          <div>
-      <label><br />
-        <input
-          type="checkbox"
-          checked={isChecked}
-          onChange={handleCheckboxChange}
-        />
-        Checkbox
-      </label>
-    </div>
+        <div>
+          <label><br />
+          <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange}/>
+          Checkbox </label>
+        </div>
           <br />
-        <button type='submit'>{t("Login.connect")}</button>
+        <button className='connect' type='submit'>{t("Login.connect")}</button>
       </form>
       {authError &&
       <h1 className='text-danger'>Mauvais user ou mot de passe</h1>

@@ -91,7 +91,7 @@ const Projet = () => {
       {
      data && data.map((row)=>(
       
-      <div key={row.id} className='container bg-secondary shadow-lg rounded m-3 p-3'>
+      <div key={row.id} className='blok container bg-secondary shadow-lg rounded m-3 p-3'>
           <h2>{row.title}</h2>
           <a className="link" href={row.lien} target="_blank" rel="noopener noreferrer">{row.lien?"Lien":""}</a>
           <img className="pacman" src={row.image}></img>

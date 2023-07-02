@@ -1,3 +1,17 @@
-@media screen and (max-width: 376px) {
-    .bloc{width: 420px;
-}}
+.bloc{
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 400px) {
+    .bloc{width: 420px;}
+}
+
+.blocs{
+    width: 100%;
+}
+
+.connect{
+    width: 100%;
+}

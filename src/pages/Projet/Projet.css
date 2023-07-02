@@ -7,8 +7,8 @@
     background-color: rgb(179, 37, 26);
   }
   
-  .container {
-    max-width: 32em;
+  .blok {
+    width: 32em;
     height:55vh;
     margin: 0 auto;
     padding: 0.9em;
@@ -42,7 +42,6 @@
   }
   
   .article {
-    margin-top: -0.2em;
-   
+    margin-top: -0.2em;  
   }
   
